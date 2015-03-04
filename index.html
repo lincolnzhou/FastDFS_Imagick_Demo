@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FastDFS分布式系统接口测试</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="js/lib/html5shiv.min.js"></script>
+  <script src="js/lib/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">FastDFS分布式系统接口测试</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <label for="file">文件上传</label>
+            <p class="help-block"></p>
+          </div>
+          <button type="button" class="btn btn-success" id="file" data-loading="正在上传中">选择上传文件</button>
+        </form>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-horizontal form-result hide">
+          <div class="form-group">
+            <label for="p_group_name" class="col-sm-2 control-label">组名</label>
+            <div class="col-sm-10">
+              <p id="p_group_name"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="p_file_id" class="col-sm-2 control-label">文件Id</label>
+            <div class="col-sm-10">
+              <p id="p_file_id"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="p_file_id" class="col-sm-2 control-label">文件存储IP地址</label>
+            <div class="col-sm-10">
+              <p id="p_source_ip_address"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="p_file_id" class="col-sm-2 control-label">文件上传名</label>
+            <div class="col-sm-10">
+              <p id="p_file_name"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> <!-- /container -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/lib/jquery-2.0.3.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="js/plugins/plupload/plupload.full.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
