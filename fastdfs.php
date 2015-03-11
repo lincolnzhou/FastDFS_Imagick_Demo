@@ -115,4 +115,12 @@ class FDFS {
      */
     public function delete() {
     }
+
+    /**
+     * 获取错误信息
+     * @author 周仕林 2015/3/10
+     */
+    public function getError() {
+        return $this->error;
+    }
 }
