@@ -1,5 +1,5 @@
 $(function() {
-  var url = 'http://192.168.4.26/fastdfs/fastdfs_php_demo/upload.php'; //文件上传地址
+  var url = 'http://192.168.4.26/fastdfs/upload.php'; //文件上传地址
 
   //上传头像
   var upload = new plupload.Uploader({

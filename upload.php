@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_FILES['file'])) {
     $file = $_FILES['file'];
     $fastDFS = new FDFS();
     $result = $fastDFS->upload($_FILES['file']);
-
     if ($result) {
     	$result['code'] = 200;
 		exit(json_encode($result));
@@ -20,5 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_FILES['file'])) {
     	$result = array('code' => 400, 'message' => $fastDFS->getError());
     	exit(json_encode($result));
     }
+} else {
+    $result['code'] = 404;
+    exit(json_encode($result));
 }
 ?>

@@ -44,6 +44,10 @@ if ($width  && $height && $quantity) {
         header('Content-Length: '.strlen($imgData));
         echo $imgData;
 	} else {
+        $tracker = fastdfs_tracker_get_connection(); //连接tracker服务器
+        $storage = fastdfs_tracker_query_storage_store(); //连接storage服务器
+        $server = fastdfs_connect_server($storage['ip_addr'], $storage['port']);
+        $storage['sock'] = $server['sock'];
         $imgData = fastdfs_storage_download_file_to_buff('group1', $originFileName);
         $imagick = new Imagick();
         $imagick->readImageBlob($imgData);
